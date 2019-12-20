@@ -481,6 +481,7 @@ void start_net()
 
 void handle_systray_event(XClientMessageEvent *e)
 {
+    usleep(30*1000);
     if (systray_profile)
         fprintf(stderr, "tint2: [%f] %s:%d\n", profiling_get_time(), __func__, __LINE__);
 
